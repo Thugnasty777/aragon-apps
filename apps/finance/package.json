@@ -25,11 +25,14 @@
     "test": "buidler test",
     "test:gas": "REPORT_GAS=true buidler test --network localhost",
     "coverage": "buidler coverage --network coverage",
-    "abi:extract": "buidler-extract --output abi/ --keys abi"
+    "abi:extract": "buidler-extract --output abi/ --keys abi",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@aragon/apps-vault": "^4.0.0",
-    "@aragon/os": "4.4.0"
+    "@aragon/os": "4.4.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@aragon/contract-helpers-test": "^0.1.0",
@@ -43,5 +46,6 @@
     "solidity-coverage": "^0.7.9",
     "solium": "^1.2.5",
     "web3": "^1.2.11"
-  }
+  },
+  "snyk": true
 }
